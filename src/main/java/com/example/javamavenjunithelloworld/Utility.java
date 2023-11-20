@@ -14,7 +14,7 @@ public class FindLargest {
         return largest;
     }
 
-    public static void sayHello() {
+    public static void () {
         System.out.println("Hello, I am Lalitha!");
     }
 
@@ -23,6 +23,6 @@ public class FindLargest {
         int largestNumber = findLargest(a, b, c);
         System.out.println("The largest number is: " + largestNumber);
 
-        sayHello();
+        lalitha();
     }
 }
