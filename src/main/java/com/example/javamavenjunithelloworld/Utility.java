@@ -1,4 +1,4 @@
-public class FindLargest {
+public class Utility {
 
     public static int findLargest(int num1, int num2, int num3) {
         int largest = num1;
