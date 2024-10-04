@@ -1,0 +1,1 @@
+console.log("hello world form the palthi akshay");
