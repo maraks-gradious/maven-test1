@@ -4,6 +4,8 @@ package com.example.javamavenjunithelloworld;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import com.example.javamavenjunittesthelloworld.Hello;
+
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;

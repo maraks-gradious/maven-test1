@@ -5,6 +5,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.example.javamavenjunittesthelloworld.Hello;
+import com.example.javamavenjunittesthelloworld.HelloApp;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
