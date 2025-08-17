@@ -1,0 +1,31 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches:
+      - "main"
+      - "Feature/**"
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Temurin JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+          cache: "maven"
+
+      - name: Build (mvn package)
+        run: mvn -B -q package --file pom.xml
+
+      - name: Run tests
+        run: mvn -q test
