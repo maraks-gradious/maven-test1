@@ -3,7 +3,7 @@ package com.example.javamavenjunitthelloworld;
 public class Utility {
 
   
-    public static void steve() {
+    public static void prabhas() {
         System.out.println("I am Prabhas");
     }
 
