@@ -34,7 +34,7 @@ public class SYED_ARIF {
         return max;
     }
     
-    // e. Leap year
+    // e.  Leap year
     public static boolean isLeapYear(int year) { return year % 4 == 0; }
     
     // f. (a+b)^2 or a^2+b^2
