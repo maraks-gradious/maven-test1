@@ -1,43 +1,53 @@
-package com.example.javamavenjunithelloworld;
+// SYED_ARIF - Utility Functions for GIT Assignment
+import java.util.Scanner;
 
-import java.io.PrintStream;
-
-/**
- * Simple class that says "Hello!".
- */
-public class Hello {
-
-    static final String HELLO = "Hello!";
-
-    public static final int MAXIMUM_AMOUNT_OF_TIMES = 20;
-
-    private int times = 1;
-
-    /**
-     * Set how many times "Hello!" should be said.
-     *
-     * @param times How many times should this class say "Hello!"? The value should be no larger than 20.
-     * @throws IllegalArgumentException Thrown when times is larger than 20 or a negative number.
-     */
-    public void setTimes(int times) {
-        if (times < 0 || times > MAXIMUM_AMOUNT_OF_TIMES) {
-            throw new IllegalArgumentException(String.format(
-                    "Parameter «times» should be a positive number no larger than %d.",
-                    MAXIMUM_AMOUNT_OF_TIMES
-            ));
-        }
-        this.times = times;
+public class SYED_ARIF {
+    public static void main(String[] args) {
+        System.out.println("Hello World by SYED_ARIF");
+        Scanner sc = new Scanner(System.in);
+        
+        // Test all functions
+        System.out.println("Divisible by 2: " + isDivisible(10, 2)); // true
+        System.out.println(compareNumbers(5, 3)); // x > y
+        System.out.println("Biggest of 3: " + biggestOfThree(1, 5, 3)); // 5
+        sc.close();
     }
-
-    /**
-     * Say "Hello!".
-     *
-     * @param printer PrintStream to write output to.
-     */
-    public void sayHello(PrintStream printer) {
-        for (short i = 0; i < times; i++) {
-            printer.println(HELLO);
-        }
+    
+    // a. Divisible by 2,3,5,9 (call 4x)
+    public static boolean isDivisible(int num, int div) { return num % div == 0; }
+    
+    // b. Compare x,y
+    public static String compareNumbers(int x, int y) {
+        if (x > y) return "x > y";
+        if (x < y) return "x < y";
+        return "x = y";
     }
-
+    
+    // c. Biggest of 3
+    public static int biggestOfThree(int a, int b, int c) {
+        return Math.max(a, Math.max(b, c));
+    }
+    
+    // d. Biggest of 3-10 (array)
+    public static int biggestOfN(int[] nums) {
+        int max = nums[0]; for(int n : nums) if(n > max) max = n;
+        return max;
+    }
+    
+    // e. Leap year
+    public static boolean isLeapYear(int year) { return year % 4 == 0; }
+    
+    // f. (a+b)^2 or a^2+b^2
+    public static boolean checkSquare(int a, int b, int n) {
+        return n == (a+b)*(a+b) || n == a*a + b*b;
+    }
+    
+    // g. Square area
+    public static double squareArea(double side) { return side * side; }
+    
+    // h. Rectangle area
+    public static double rectangleArea(double l, double b) { return l * b; }
+    
+    // i. Square root
+    public static double squareRoot(double num) { return Math.sqrt(num); }
 }
